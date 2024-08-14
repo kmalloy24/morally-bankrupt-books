@@ -5,12 +5,12 @@ template: splash
 hero:
   title: |
     Morally Bankrupt Books
-  tagline: Trade your soul for free copies of free e-books.
+  tagline: Trade your soul for free copies of free e-books. Then search all of them at once with Algolia.
   image:
     file: ../../assets/devil.png
   actions:
     - text: Your Books
-      link: /guides/example/
+      link: /intro-git/020-git-clone//
       icon: right-arrow
       variant: primary
     - text: LWJ Web Dev Hackathon #3
@@ -18,21 +18,55 @@ hero:
       icon: external
 ---
 
+{/* IMPORTS */}
+
+import EbookCard from "@components/EbookCard.astro";
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
-## Next steps
+{/* MARKUP */}
 
-<CardGrid>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
-  </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
-  </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
-  </Card>
-</CardGrid>
+## 🔥 Books
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+<EbookCard
+  title="Eloquent JavaScript"
+  author="Marijn Haverbeke"
+  price={1}
+  imageUrl="https://eloquentjavascript.net/img/cover.jpg"
+  credit="https://eloquentjavascript.net/index.html"
+  edition="4th Edition (2024)"
+  license="CC BY-NC 3.0"
+/>
+
+<EbookCard
+  title="Introduction to Git and GitHub"
+  author="Bobby Iliev"
+  price={1}
+  imageUrl="https://camo.githubusercontent.com/a064158e3e91cc0ee88e561e5ae98973c11775a3891edcca6cc4684c30800a54/68747470733a2f2f696d6775722e636f6d2f30797974494c342e706e67"
+  credit="https://eloquentjavascript.net/index.html"
+  edition="2021"
+  license="MIT"
+/>
+
+<EbookCard
+  title="Introduction to Git and GitHub"
+  author="Bobby Iliev"
+  price={1}
+  imageUrl="https://camo.githubusercontent.com/a064158e3e91cc0ee88e561e5ae98973c11775a3891edcca6cc4684c30800a54/68747470733a2f2f696d6775722e636f6d2f30797974494c342e706e67"
+  credit="https://eloquentjavascript.net/index.html"
+  edition="2021"
+  license="MIT"
+/>
+
+<EbookCard
+  title="Introduction to Git and GitHub"
+  author="Bobby Iliev"
+  price={1}
+  imageUrl="https://camo.githubusercontent.com/a064158e3e91cc0ee88e561e5ae98973c11775a3891edcca6cc4684c30800a54/68747470733a2f2f696d6775722e636f6d2f30797974494c342e706e67"
+  credit="https://eloquentjavascript.net/index.html"
+  edition="2021"
+  license="MIT"
+/>
+
+</div>

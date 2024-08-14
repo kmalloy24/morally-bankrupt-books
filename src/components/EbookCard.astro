@@ -1,0 +1,28 @@
+---
+interface EbookCardProps {
+  title: string;
+  author: string;
+  price: number;
+  imageUrl: string;
+  credit: string;
+  edition: string;
+  license: string;
+}
+
+const { title, author, price, imageUrl, credit, license, edition } = Astro.props as EbookCardProps;
+---
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-accent-900">
+  <img class="object-cover w-full h-full" src={imageUrl} alt={title} />
+  <div class="px-6 py-2">
+    <p class="font-bold text-2xl text-white">{title}</p>
+    <a href={credit} target="_blank" class="font-semibold text-lg text-white">by {author}</a>
+    <p class="text-white">{edition} | {license}</p>
+  </div>
+  <div class="px-6 pb-2 flex justify-between items-center">
+    <span class="font-bold text-lg text-white">{price}x 👻</span>
+    <button class="bg-accent-600 hover:bg-accent-200 font-bold py-2 px-4 rounded">
+      Add to Cart
+    </button>
+  </div>
+</div>

@@ -40,3 +40,9 @@ Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro 
 
 - [Algolia DocSearch + Astro Starlight](https://www.algolia.com/blog/engineering/algolia-docsearch-astro-starlight/)
 - [Algolia DocSearch + Astro Starlight Part 2](https://www.algolia.com/blog/engineering/algolia-docsearch-astro-starlight-part-2/)
+
+## Adding Books
+
+### Add Required Starlight Frontmatter to Markdown Files
+
+Run the `.py` in `/scripts` in the directory of the markdown files. It will add a `Title` frontmatter property based on the file name.

@@ -18,19 +18,15 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            {
-              label: "Example Guide",
-              slug: "guides/example",
-            },
-          ],
+          label: "Eloquent Javascript",
+          autogenerate: {
+            directory: "eloquent-js",
+          },
         },
         {
-          label: "Reference",
+          label: "Intro to Git & Github",
           autogenerate: {
-            directory: "reference",
+            directory: "intro-git",
           },
         },
       ],
