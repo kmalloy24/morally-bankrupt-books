@@ -8,9 +8,10 @@ import starlightDocSearch from "@astrojs/starlight-docsearch";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "",
+      title: "Morally Bankrupt Books",
       logo: {
         src: "./public/favicon.png",
+        replacesTitle: true,
       },
       favicon: "/favicon.png",
       social: {
