@@ -1,0 +1,38 @@
+---
+title: Morally Bankrupt Books
+description: Trade your soul for free copies of free e-books.
+template: splash
+hero:
+  title: |
+    Morally Bankrupt Books
+  tagline: Trade your soul for free copies of free e-books.
+  image:
+    file: ../../assets/devil.png
+  actions:
+    - text: Your Books
+      link: /guides/example/
+      icon: right-arrow
+      variant: primary
+    - text: LWJ Web Dev Hackathon #3
+      link: https://www.learnwithjason.dev/blog/web-dev-challenge-hackathon-algolia
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Next steps
+
+<CardGrid>
+  <Card title="Update content" icon="pencil">
+    Edit `src/content/docs/index.mdx` to see this page change.
+  </Card>
+  <Card title="Add new content" icon="add-document">
+    Add Markdown or MDX files to `src/content/docs` to create new pages.
+  </Card>
+  <Card title="Configure your site" icon="setting">
+    Edit your `sidebar` and other config in `astro.config.mjs`.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+  </Card>
+</CardGrid>
