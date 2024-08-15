@@ -7,7 +7,7 @@ Trade your soul for free copies of free e-books.
 
 Built for the [Web Dev Challenge Hackathon #3 (E-comm Edition)](https://www.learnwithjason.dev/blog/web-dev-challenge-hackathon-algolia)
 
-The app is a server-rendered [Astro](https://astro.build/) site, and uses the [Algolia DocSearch](https://docsearch.algolia.com/) plugin for the [Starlight](https://starlight.astro.build/) docs theme to provide analystics and SSR flexibility to
+The app is a server-rendered [Astro](https://astro.build/) site, and uses the [Algolia DocSearch](https://docsearch.algolia.com/) plugin for the [Starlight](https://starlight.astro.build/) theme.
 
 ## How It Works
 
@@ -21,21 +21,19 @@ The app uses [nanostores](https://docs.astro.build/en/recipes/sharing-state/) to
 
 This provides a kind of fake route protection for the demostrative purposes of this hackathon.
 
-But! You could add persistence, middleware, and a payment provider to essentially make an e-commerce site with an e-reader.
+But! You could add persistence, middleware, and a payment provider to essentially make an e-commerce site with a built in e-reader.
 
-### Algolia
+### Setting Up Algolia DocSearch
 
 1. Configure [Astro SSR](https://docs.astro.build/en/guides/server-side-rendering/)
-2. Deploy your Astro SSR app to your [desired provider](https://docs.astro.build/en/guides/server-side-rendering/#official-adapters) (this project uses Vercel)
-3. Use your production link to [apply for DocSearch](https://docsearch.algolia.com/apply/) (response time varies)
+2. Deploy your app to your [desired provider](https://docs.astro.build/en/guides/server-side-rendering/#official-adapters) (this project uses Vercel)
+3. Use your production link to [apply for DocSearch](https://docsearch.algolia.com/apply/)
 4. [Add Algolia to Starlight](https://starlight.astro.build/guides/site-search/#algolia-docsearch)
 
 > [!CAUTION]
-> Algolia `appId`, `apiKey`, and `indexName` are safe to use client-side.
->
-> `write` and `admin` have to stay secret.
+> Algolia `appId`, `apiKey`, and `indexName` are safe to use client-side. `write` and `admin` stay secret.
 
-### Astro/Starlight
+### Running Astro/Starlight
 
 All commands are run from the root of the project, from a terminal:
 
