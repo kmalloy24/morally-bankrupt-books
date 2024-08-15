@@ -35,7 +35,9 @@ const { title, author, price, imageUrl, credit, license, edition, href } = Astro
   isMorallyBankrupt.subscribe(open => {
     const readButtons = document.querySelectorAll('.read-button');
     readButtons.forEach(button => {
-      button.style.display = open ? 'block' : 'none';
+      const anchor = button as HTMLAnchorElement;
+      anchor.style.display = open ? 'block' : 'none';
     });
   });
 </script>
+

@@ -9,7 +9,21 @@ Built for the [Web Dev Challenge Hackathon #3 (E-comm Edition)](https://www.lear
 
 The app is a server-rendered [Astro](https://astro.build/) site, and uses the [Algolia DocSearch](https://docsearch.algolia.com/) plugin for the [Starlight](https://starlight.astro.build/) docs theme to provide analystics and SSR flexibility to
 
-## Algolia
+## How It Works
+
+### Adding Books
+
+To add books written in markdown you will need to add the required frontmatter for the docs content collection in Starlight. Run `md-titles.py` from `/scripts` in the directory of the markdown files you wish to add the frontmatter to. It will add a `Title` property based on the file name.
+
+### Selling Your Soul
+
+The app uses [nanostores](https://docs.astro.build/en/recipes/sharing-state/) to share state between `Button.astro` and `EbookCard.astro`.
+
+This provides a kind of fake route protection for the demostrative purposes of this hackathon.
+
+But! You could add persistence, middleware, and a payment provider to essentially make an e-commerce site with an e-reader.
+
+### Algolia
 
 1. Configure [Astro SSR](https://docs.astro.build/en/guides/server-side-rendering/)
 2. Deploy your Astro SSR app to your [desired provider](https://docs.astro.build/en/guides/server-side-rendering/#official-adapters) (this project uses Vercel)
@@ -21,7 +35,7 @@ The app is a server-rendered [Astro](https://astro.build/) site, and uses the [A
 >
 > `write` and `admin` have to stay secret.
 
-## Astro/Starlight
+### Astro/Starlight
 
 All commands are run from the root of the project, from a terminal:
 
@@ -36,13 +50,9 @@ All commands are run from the root of the project, from a terminal:
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
 
+---
+
 ## References
 
 - [Algolia DocSearch + Astro Starlight](https://www.algolia.com/blog/engineering/algolia-docsearch-astro-starlight/)
 - [Algolia DocSearch + Astro Starlight Part 2](https://www.algolia.com/blog/engineering/algolia-docsearch-astro-starlight-part-2/)
-
-## Adding Books
-
-### Add Required Starlight Frontmatter to Markdown Files
-
-Run the `.py` in `/scripts` in the directory of the markdown files. It will add a `Title` frontmatter property based on the file name.
