@@ -9,10 +9,6 @@ hero:
   image:
     file: ../../assets/devil.png
   actions:
-    - text: Your Books
-      link: /intro-git/020-git-clone//
-      icon: right-arrow
-      variant: primary
     - text: LWJ Web Dev Hackathon #3
       link: https://www.learnwithjason.dev/blog/web-dev-challenge-hackathon-algolia
       icon: external
@@ -21,11 +17,14 @@ hero:
 {/* IMPORTS */}
 
 import EbookCard from "@components/EbookCard.astro";
+import Button from "@components/Button.astro";
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
 {/* MARKUP */}
 
-## 🔥 Books
+<Button />
+
+## Books
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
@@ -37,6 +36,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   credit="https://eloquentjavascript.net/index.html"
   edition="4th Edition (2024)"
   license="CC BY-NC 3.0"
+  href="/eloquent-js/00_intro/"
 />
 
 <EbookCard
@@ -47,26 +47,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   credit="https://eloquentjavascript.net/index.html"
   edition="2021"
   license="MIT"
-/>
-
-<EbookCard
-  title="Introduction to Git and GitHub"
-  author="Bobby Iliev"
-  price={1}
-  imageUrl="https://camo.githubusercontent.com/a064158e3e91cc0ee88e561e5ae98973c11775a3891edcca6cc4684c30800a54/68747470733a2f2f696d6775722e636f6d2f30797974494c342e706e67"
-  credit="https://eloquentjavascript.net/index.html"
-  edition="2021"
-  license="MIT"
-/>
-
-<EbookCard
-  title="Introduction to Git and GitHub"
-  author="Bobby Iliev"
-  price={1}
-  imageUrl="https://camo.githubusercontent.com/a064158e3e91cc0ee88e561e5ae98973c11775a3891edcca6cc4684c30800a54/68747470733a2f2f696d6775722e636f6d2f30797974494c342e706e67"
-  credit="https://eloquentjavascript.net/index.html"
-  edition="2021"
-  license="MIT"
+  href="/intro-git/000-introduction/"
 />
 
 </div>

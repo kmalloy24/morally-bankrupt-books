@@ -1,0 +1,16 @@
+<button class="soul-button bg-accent-600 hover:bg-accent-200 font-bold py-2 px-4 rounded cursor-pointer">
+    Sell your soul 🔥
+  </button>
+    
+  <script>
+    import { isMorallyBankrupt } from '../stores';
+    
+    // Set the store to true when the button is clicked
+    function soldSoul() {
+      isMorallyBankrupt.set(true);
+    }
+  
+    // Add an event listener to the button
+    document.querySelector('.soul-button').addEventListener('click', soldSoul);
+  </script>
+  

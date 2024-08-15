@@ -7,9 +7,10 @@ interface EbookCardProps {
   credit: string;
   edition: string;
   license: string;
+  href: string;
 }
 
-const { title, author, price, imageUrl, credit, license, edition } = Astro.props as EbookCardProps;
+const { title, author, price, imageUrl, credit, license, edition, href } = Astro.props as EbookCardProps;
 ---
 
 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-accent-900">
@@ -21,8 +22,20 @@ const { title, author, price, imageUrl, credit, license, edition } = Astro.props
   </div>
   <div class="px-6 pb-2 flex justify-between items-center">
     <span class="font-bold text-lg text-white">{price}x 👻</span>
-    <button class="bg-accent-600 hover:bg-accent-200 font-bold py-2 px-4 rounded">
-      Add to Cart
-    </button>
+    <a href={href} class="read-button hidden bg-accent-600 hover:bg-accent-200 font-bold py-2 px-4 rounded cursor-pointer no-underline">
+      <p class="text-white">Read</p>
+    </a>
   </div>
 </div>
+
+<script>
+  import { isMorallyBankrupt } from '../stores';
+
+  // Listen to changes in the store, and show/hide the read button accordingly
+  isMorallyBankrupt.subscribe(open => {
+    const readButtons = document.querySelectorAll('.read-button');
+    readButtons.forEach(button => {
+      button.style.display = open ? 'block' : 'none';
+    });
+  });
+</script>
