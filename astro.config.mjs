@@ -34,9 +34,9 @@ export default defineConfig({
       customCss: ["./src/tailwind.css"],
       plugins: [
         starlightDocSearch({
-          appId: "YOUR_APP_ID",
-          apiKey: "YOUR_SEARCH_API_KEY",
-          indexName: "YOUR_INDEX_NAME",
+          appId: "BZW4A8NQYG",
+          apiKey: "26e3e817488b9ed8c3e0b122cd7611ad",
+          indexName: "morally-bankrupt-books",
         }),
       ],
     }),
